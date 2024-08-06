@@ -8,8 +8,8 @@ import { ToastProvider } from "@/components/ui/toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Detoxify",
-  description: "Learn what you want not what algorithm wants",
+  title: "Statsupnow",
+  description: "A platform to manage your youtube user account",
 };
 
 export default function RootLayout({

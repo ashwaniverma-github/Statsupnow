@@ -24,6 +24,6 @@ export default function Signin(){
 
 function GoogleIcon(props:any) {
     return (
-        <Image src="/g.svg" alt="Google icon" {...props} />
+        <Image src="/g.svg" alt="Google icon" width={0} height={0} {...props} />
     )
 }

@@ -1,7 +1,7 @@
 
 import Subscriptions from "@/components/dynamicComponents/dynamicSubscriptions"
 
-export default function Analytic(){
+export default function SubscribedChannels(){
     return <div className="text-center">
         <Subscriptions/>
     </div>

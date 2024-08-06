@@ -35,7 +35,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Preference from "@/pages/preference"; // Ensure this path is correct
-import Analytic from "@/pages/analytics";
+import SubscribedChannels from "@/pages/subscribedChannels";
 
 export default function UserApp() {
   const [activeComponent, setActiveComponent] = useState<string | null>(null);
@@ -44,8 +44,8 @@ export default function UserApp() {
     switch (activeComponent) {
       case "Preferences":
         return <Preference />;
-      case "Analytics":
-        return <Analytic/>
+      case "SubscribedChannels":
+        return <SubscribedChannels/>
       default:
         return <Preference/>
     }
@@ -62,28 +62,28 @@ export default function UserApp() {
   };
 
   return (
-    <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-      <div className="hidden border-r md:block">
+    <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr] pt-2">
+      <div className="hidden border-r border-red-300 md:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
-          <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6"></div>
-          <div className="flex-1">
-            <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
-              <button
-                onClick={() => setActiveComponent("Preferences")}
-                className={getNavButtonClass("Preferences")}
-              >
-                <Settings2 className="h-4 w-4" />
-                Preferences {getNavArrow("Preferences")}
-              </button>
-              <button
-                onClick={() => setActiveComponent("Analytics")}
-                className={getNavButtonClass("Analytics")}
-              >
-                <LineChart className="h-4 w-4" />
-                Subscribed channels {getNavArrow("Analytics")}
-              </button>
-            </nav>
-          </div>
+          <div className="flex h-14 items-center px-4 lg:h-[60px] lg:px-6"></div>
+            <div className="flex-1  ">
+              <nav className="grid items-start shadow-slate-600 px-2 text-sm font-medium lg:px-4 fixed">
+                <button
+                  onClick={() => setActiveComponent("Preferences")}
+                  className={getNavButtonClass("Preferences")}
+                >
+                  <Settings2 className="h-4 w-4" />
+                  Preferences {getNavArrow("Preferences")}
+                </button>
+                <button
+                  onClick={() => setActiveComponent("SubscribedChannels")}
+                  className={getNavButtonClass("SubscribedChannels")}
+                >
+                  <LineChart className="h-4 w-4" />
+                  Subscribed channels {getNavArrow("SubscribedChannels")}
+                </button>
+              </nav>
+            </div>
         </div>
       </div>
       <div className="flex flex-col min-h-screen">

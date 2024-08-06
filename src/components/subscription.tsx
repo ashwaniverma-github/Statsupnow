@@ -13,6 +13,8 @@ type Subscription = {
     thumbnails: {
       medium: {
         url: string;
+        width:number;
+        height:number;
       };
     };
   };
@@ -72,11 +74,14 @@ export default function Subscriptions() {
       <h1 className="text-2xl font-semibold mb-4">Your Subscribed Channels</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {channels.map((channel) => (
-          <div key={channel.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-            <img
+          <div key={channel.id} className="  bg-zinc-50  rounded-lg shadow-md overflow-hidden">
+            <Image
               src={channel.snippet.thumbnails.medium.url}
               alt={channel.snippet.title}
               className="w-full h-48 object-cover"
+              width={400}
+              height={50}
+              quality={100}
               
             />
             <div className="p-4">

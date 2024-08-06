@@ -16,7 +16,7 @@ export default function Avatar({ image ,name,email}: AvatarProps) {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="icon" className="overflow-hidden rounded-full">
-            <img src={image} width={60} height={60} alt="Avatar" className="overflow-hidden rounded-full" />
+            <Image src={image} width={400} height={400} alt="Avatar" className="overflow-hidden rounded-full" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">

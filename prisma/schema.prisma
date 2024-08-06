@@ -26,3 +26,9 @@ model Preference {
   topics  String[]
   user    User     @relation(fields: [userId], references: [id])
 }
+
+model Tester {
+  id      String @id @default(uuid())
+  email   String @unique 
+  createdAt   DateTime @default(now())
+}

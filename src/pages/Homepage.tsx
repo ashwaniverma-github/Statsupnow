@@ -3,9 +3,13 @@ import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 
+import { useEffect, useState } from "react"
+import TesterForm from "@/components/testerForm"
 export default function Homepage(){
+    
     const router = useRouter()
 
+   
     return (
         <div className="">
             <div className="navbar">
@@ -23,7 +27,7 @@ export default function Homepage(){
                     </Button>
                 </div>
             </div>
-
+            <TesterForm/>
             <div className="hero mt-10 text-center font-kalnia-glaze">
                 <motion.header 
                     className="text-5xl font-semibold" 
