@@ -1,6 +1,6 @@
-import VideoFeed from "@/components/videoFeed";
+import VideoFeed from "@/components/dynamicComponents/dynamicYoutubeFeed"
 
-export function YoutubeFeed(){
+export default function YoutubeFeed(){
     return <div>
         <VideoFeed/>
     </div>

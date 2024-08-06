@@ -54,7 +54,7 @@ export default function VideoFeed() {
     };
 
     fetchVideos();
-  }, [session]);
+  }, [session,toast])
 
   if (loading) {
     return <SkeletonLoader />;

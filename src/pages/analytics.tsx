@@ -1,4 +1,5 @@
-import Subscriptions from "@/components/subscription";
+
+import Subscriptions from "@/components/dynamicComponents/dynamicSubscriptions"
 
 export default function Analytic(){
     return <div className="text-center">

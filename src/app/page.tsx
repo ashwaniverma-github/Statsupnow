@@ -1,12 +1,12 @@
-import Homepage from "@/pages/Homepage"
-import { signIn } from "next-auth/react"
-
+import Homepage from "@/pages/Homepage";
 
 export default function Home() {
-  return <div>
-    <Homepage/>
-  </div>
-    
-  
-  
+  return (
+    <>
+     
+      <div>
+        <Homepage />
+      </div>
+    </>
+  );
 }

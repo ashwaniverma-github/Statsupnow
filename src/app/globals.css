@@ -62,3 +62,14 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+
+
+
+
+.text-style{
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: cursive;
+}

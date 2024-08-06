@@ -1,4 +1,4 @@
-import { YoutubeFeed } from "@/pages/youtubeFeed";
+import YoutubeFeed from "@/pages/youtubeFeed"
 
 export default function Youtube(){
     return (

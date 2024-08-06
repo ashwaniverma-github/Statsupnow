@@ -10,7 +10,7 @@ export default function Homepage(){
         <div className="">
             <div className="navbar">
                 <div className="navbar-start">
-                    <h1 className="font-bold text-2xl m-4">Detoxify</h1>
+                    <h1 className="font-bold text-xl m-4 font-kalnia-glaze">Statsupnow</h1>
                 </div>
                 <div className="">
                     <div className=" px-10">
@@ -24,7 +24,7 @@ export default function Homepage(){
                 </div>
             </div>
 
-            <div className="hero mt-10 text-center">
+            <div className="hero mt-10 text-center font-kalnia-glaze">
                 <motion.header 
                     className="text-5xl font-semibold" 
                     initial={{ opacity: 0, y: -50 }}
@@ -34,14 +34,14 @@ export default function Homepage(){
                     Learn What Matters
                 </motion.header>
             </div>
-            <div className="text-center pt-5">
+            <div className="text-center pt-5 text-style">
                 <motion.h1 
                     className="text-2xl" 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut", delay: 0.3 }}
                 >
-                    Custom YouTube Feeds for Focused Learning
+                    Manage your youtube user account with Stats <br/> to improve your youtube experience
                 </motion.h1>
             </div>
             <div className="text-center m-10">

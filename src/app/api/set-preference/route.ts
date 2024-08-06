@@ -1,12 +1,12 @@
 import { getServerSession } from "next-auth";
-import { authOptions } from "../auth/[...nextauth]/route";
+import { authOptions } from "../auth/[...nextauth]/options";
 import prisma from "../../../../prisma/db";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function POST(req:Request) {
     const session = await getServerSession(authOptions);
     if (!session || !session.user?.email) {
-        return NextResponse.json({ error: "User not signed in or email not available" }, { status: 401 });
+        return Response.json({ error: "User not signed in or email not available" }, { status: 401 });
     }
 
     try {
@@ -14,7 +14,7 @@ export async function POST(req: Request) {
         
         // Ensure preferences is an array of strings
         if (!Array.isArray(preferences)) {
-            return NextResponse.json({ error: "Invalid data format. Expected an array of topics." }, { status: 400 });
+            return Response.json({ error: "Invalid data format. Expected an array of topics." }, { status: 400 });
         }
 
         // Find the user's existing preferences
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
         });
 
         if (!user) {
-            return NextResponse.json({ error: "User not found" }, { status: 404 });
+            return Response.json({ error: "User not found" }, { status: 404 });
         }
 
         if (user.preferences.length > 0) {
@@ -43,9 +43,9 @@ export async function POST(req: Request) {
             });
         }
 
-        return NextResponse.json({ success: true });
+        return Response.json({ success: true });
     } catch (e) {
         console.error(e);
-        return NextResponse.json({ error: "An error occurred while updating preferences" }, { status: 500 });
+        return Response.json({ error: "An error occurred while updating preferences" }, { status: 500 });
     }
 }

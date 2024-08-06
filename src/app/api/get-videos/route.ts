@@ -1,10 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth';
 import prisma from '../../../../prisma/db';// Adjust the path as necessary
 import { google } from 'googleapis';
-import { authOptions } from '../auth/[...nextauth]/route';
-
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+import { authOptions } from '../auth/[...nextauth]/options';
+export async function POST() {
   const session = await getServerSession(authOptions);
 
   if (!session || !session.accessToken) {

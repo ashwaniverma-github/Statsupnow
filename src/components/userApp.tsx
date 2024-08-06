@@ -37,7 +37,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Preference from "@/pages/preference"; // Ensure this path is correct
 import Analytic from "@/pages/analytics";
 
-export function UserApp() {
+export default function UserApp() {
   const [activeComponent, setActiveComponent] = useState<string | null>(null);
 
   const renderComponent = () => {
@@ -80,7 +80,7 @@ export function UserApp() {
                 className={getNavButtonClass("Analytics")}
               >
                 <LineChart className="h-4 w-4" />
-                Analytics {getNavArrow("Analytics")}
+                Subscribed channels {getNavArrow("Analytics")}
               </button>
             </nav>
           </div>
@@ -109,7 +109,7 @@ export function UserApp() {
                   className={getNavButtonClass("Analytics")}
                 >
                   <LineChart className="h-5 w-5" />
-                  Analytics {getNavArrow("Analytics")}
+                  Subscribed channels {getNavArrow("Analytics")}
                 </button>
               </nav>
             </SheetContent>
