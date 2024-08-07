@@ -37,11 +37,11 @@ export default function UserApp() {
   };
 
   const getNavArrow = (component: string) => {
-    return activeComponent === component ? <span className="ml-2">→</span> : null;
+    return activeComponent === component ? <span className="">→</span> : null;
   };
 
   return (
-    <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr] pt-2">
+    <div className="grid min-h-screen w-full md:grid-cols-[250px_1fr] lg:grid-cols-[280px_1fr] pt-2">
       <div className="hidden border-r border-red-300 md:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-14 items-center px-4 lg:h-[60px] lg:px-6"></div>
@@ -74,7 +74,7 @@ export default function UserApp() {
             </div>
         </div>
       </div>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen ">
         <header className="flex h-14 items-center gap-4 border-b px-4 lg:h-[60px] lg:px-6">
           <Sheet>
             <SheetTrigger asChild>
@@ -84,7 +84,7 @@ export default function UserApp() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="flex flex-col bg-black">
-              <nav className="grid gap-2 text-lg font-medium">
+              <nav className="grid gap-2 text-lg font-medium ">
                 <button
                   onClick={() => setActiveComponent("Preferences")}
                   className={getNavButtonClass("Preferences")}
@@ -98,6 +98,13 @@ export default function UserApp() {
                 >
                   <LineChart className="h-5 w-5" />
                   Subscribed channels {getNavArrow("Subscribed channels")}
+                </button>
+                <button
+                  onClick={() => setActiveComponent("Stats")}
+                  className={getNavButtonClass("Stats")}
+                >
+                  <LineChartIcon className="h-4 w-4" />
+                  Stats {getNavArrow("Stats")}
                 </button>
               </nav>
             </SheetContent>

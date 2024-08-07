@@ -37,7 +37,7 @@ export default function Navbar() {
 
   return (
     <div >
-      <div className="navbar border-b-2 border-red-300 fixed bg-black" >
+      <div className="navbar border-b-2 border-red-300 md:fixed bg-black" >
         <div className="navbar-start flex items-center">
           <Link href={'/youtube'} className="flex ">
             <Youtube  className=" cursor-pointer " color="red"  size={30} />
@@ -45,7 +45,7 @@ export default function Navbar() {
           </Link>
           
         </div>
-        <div className="navbar-center">
+        <div className="navbar-center hidden sm:block">
           <h1 className="font-semibold text-lg">Welcome {profile.name}</h1>
         </div>
         <div className="navbar-end">
