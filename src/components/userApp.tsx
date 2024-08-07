@@ -1,41 +1,18 @@
 'use client'
 import { useState } from "react";
 import {
-  Bell,
-  CircleUser,
   Home,
   LineChart,
+  LineChartIcon,
   Menu,
-  Package,
-  Package2,
-  Search,
   Settings2,
-  ShoppingCart,
-  Users,
   Youtube,
 } from "lucide-react";
-
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import Preference from "@/pages/preference"; // Ensure this path is correct
+import Preference from "@/pages/preference"; 
 import SubscribedChannels from "@/pages/subscribedChannels";
+import Stats from "@/pages/Stats";
 
 export default function UserApp() {
   const [activeComponent, setActiveComponent] = useState<string | null>(null);
@@ -45,7 +22,9 @@ export default function UserApp() {
       case "Preferences":
         return <Preference />;
       case "SubscribedChannels":
-        return <SubscribedChannels/>
+        return <SubscribedChannels/>;
+      case "Stats":
+        return <Stats/>
       default:
         return <Preference/>
     }
@@ -67,7 +46,7 @@ export default function UserApp() {
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-14 items-center px-4 lg:h-[60px] lg:px-6"></div>
             <div className="flex-1  ">
-              <nav className="grid items-start shadow-slate-600 px-2 text-sm font-medium lg:px-4 fixed">
+              <nav className="grid items-start shadow-slate-100 px-2 text-sm font-medium lg:px-4 fixed">
                 <button
                   onClick={() => setActiveComponent("Preferences")}
                   className={getNavButtonClass("Preferences")}
@@ -75,12 +54,21 @@ export default function UserApp() {
                   <Settings2 className="h-4 w-4" />
                   Preferences {getNavArrow("Preferences")}
                 </button>
+
                 <button
                   onClick={() => setActiveComponent("SubscribedChannels")}
                   className={getNavButtonClass("SubscribedChannels")}
                 >
-                  <LineChart className="h-4 w-4" />
+                  <Youtube className="h-4 w-4" />
                   Subscribed channels {getNavArrow("SubscribedChannels")}
+                </button>
+
+                <button
+                  onClick={() => setActiveComponent("Stats")}
+                  className={getNavButtonClass("Stats")}
+                >
+                  <LineChartIcon className="h-4 w-4" />
+                  Stats {getNavArrow("Stats")}
                 </button>
               </nav>
             </div>
@@ -105,11 +93,11 @@ export default function UserApp() {
                   Preferences {getNavArrow("Preferences")}
                 </button>
                 <button
-                  onClick={() => setActiveComponent("Analytics")}
-                  className={getNavButtonClass("Analytics")}
+                  onClick={() => setActiveComponent("Subscribed channels")}
+                  className={getNavButtonClass("Subscribed channels")}
                 >
                   <LineChart className="h-5 w-5" />
-                  Subscribed channels {getNavArrow("Analytics")}
+                  Subscribed channels {getNavArrow("Subscribed channels")}
                 </button>
               </nav>
             </SheetContent>

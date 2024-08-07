@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className="navbar-start flex items-center">
           <Link href={'/youtube'} className="flex ">
             <Youtube  className=" cursor-pointer " color="red"  size={30} />
-            <span className="ml-2 cursor-pointer ">My Youtube</span>
+            <span className="ml-2 cursor-pointer ">My Youtube <h2 className=" inline-block font-semibold" >(beta)</h2></span>
           </Link>
           
         </div>
