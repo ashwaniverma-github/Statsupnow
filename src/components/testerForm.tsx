@@ -62,7 +62,7 @@ export default function TesterForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                    <h2 className="mb-5 text-center font-semibold text-lg " >Enter your mail to be part of out beta Testing program</h2>
+                    <h2 className="mb-5 text-center font-semibold text-lg " >Enter your mail to be part of our beta testing program</h2>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input placeholder="example@example.com"  {...field} />
