@@ -40,7 +40,7 @@ export default function Homepage(){
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut", delay: 0.3 }}
                 >
-                'Manage your YouTube user account'<br className="hidden sm:block"/> Unsubscribe to unnecessary channels
+                'Manage your YouTube user account for better focus'<br className="hidden sm:block"/> Unsubscribe to unnecessary channels
                 </motion.h1>
             </div>
             <div className="text-center m-10">
