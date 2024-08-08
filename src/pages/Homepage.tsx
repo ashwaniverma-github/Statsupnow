@@ -13,7 +13,7 @@ export default function Homepage(){
                 <div className="flex-1">
                     <h1 className="font-bold text-xl m-4 ">Statsupnow</h1>
                 </div>
-                <div className="hidden sm:block px-10">
+                <div className="hidden  px-10">
                     <button className="font-semibold" onClick={()=>{alert('we are free for now')}}>Pricing</button>
                 </div>
                 <div className="flex-none">
@@ -40,7 +40,7 @@ export default function Homepage(){
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut", delay: 0.3 }}
                 >
-                    Manage your YouTube user account with Stats <br className="hidden sm:block"/> to improve your YouTube experience
+                'Manage your YouTube user account'<br className="hidden sm:block"/> Unsubscribe to unnecessary channels
                 </motion.h1>
             </div>
             <div className="text-center m-10">
