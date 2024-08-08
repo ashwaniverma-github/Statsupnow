@@ -45,7 +45,7 @@ export default function Navbar() {
           </Link>
           
         </div>
-        <div className="navbar-center hidden sm:block">
+        <div className="navbar-center hidden ">
           <h1 className="font-semibold text-lg">Welcome {profile.name}</h1>
         </div>
         <div className="navbar-end">
